@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="navbar.css"/>
+    <link rel="stylesheet" href="about.css">
+    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+    <title>About Section</title>
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+      <source src="media/back_about.mp4" type="video/mp4" />
+    </video>
+    <header>
+      <div class="navbar">
+        <img src="media/logo1.png" class="logo1" alt="" />
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tour.html">Tour</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="exp.html">Explore</a></li>
+        </ul>
+        <a href="#" class="action_btn">Login</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tour.html">Tour</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="exp.html">Explore</a></li>
+        <li><a href="#" class="action_btn">Login</a></li>
+      </div>
+    </header>
+
+    <div class="about_content">
+      <h1>Want to know us?</h1>
+      <p>
+        Step into a world of boundless possibilities as you embark on your
+        travel journey with us. Our website stands as a testament to a
+        commitment to provide an extraordinary experience from start to finish.
+        We offer an extensive range of features, each thoughtfully crafted to
+        cater to every conceivable aspect of your upcoming adventure.
+        <br />
+        <br />
+        For the epicurean explorer, our platform boasts a comprehensive guide to
+        restaurants that will satisfy your palate with the finest culinary
+        experiences. Are you in pursuit of the perfect hotel, an oasis of
+        comfort and luxury? Look no further; we offer a curated selection of
+        accommodations that cater to every taste and budget.
+        <br />
+        <br />
+        Safety is paramount, and our website equips you with information about
+        hospitals in your chosen destinations. Rest assured, we've got your
+        well-being covered. When it comes to navigation, our interactive maps
+        serve as a reliable compass, ensuring you traverse unfamiliar terrain
+        with ease.
+        <br />
+        <br />
+        For those seeking an adrenaline rush, our adventure sports section is a
+        trove of thrilling activities that promise to ignite your inner
+        thrill-seeker. Whether it's scaling towering peaks, diving into the
+        depths of the ocean, or conquering white-water rapids, we have an
+        adventure suited just for you.
+        <br />
+        <br />
+        But our commitment to your journey doesn't end there. We take pride in
+        being your dedicated travel partner, offering meticulously planned
+        itineraries and insider tips to help you make the most of every moment.
+        We're not just here to help you plan; we're here to ensure every step of
+        your adventure is a resounding success and an absolute joy. Your dream
+        expedition begins with us, where success and enjoyment are not just
+        promises but guarantees, and every memory is a treasure to cherish for a
+        lifetime. So, set forth on your odyssey with confidence, knowing that
+        with us, your adventure is destined to be extraordinary.
+      </p>
+    </div>
+
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>

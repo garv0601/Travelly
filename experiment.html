@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>Default NearBy Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Default NearBy Search" />
+
+    <script src="https://apis.mappls.com/advancedmaps/api/aef407688333728d281152ec7567c8c6/map_sdk?layer=vector&v=3.0&callback=initMap1"></script>
+    <script src="https://apis.mappls.com/advancedmaps/api/d8f843b2-f5ff-4732-9d7e-660bff1c4a19/map_sdk_plugins?v=3.0"></script>
+    <style>
+      body {
+        margin: 0;
+      }
+      #map {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="nearby_search"
+      style="
+        margin: 5px;
+        width: 100%;
+        height: 600px;
+        overflow-y: auto;
+        border-radius: 10px;
+      "
+    ></div>
+    <div id="map"></div>
+    <script>
+      /*Map Initialization*/
+      var map, nr;
+      function initMap1() {
+        map = new mappls.Map("map", {
+          center: [28.09, 78.3],
+          zoom: 5,
+        });
+
+        map.addListener("load", function () {
+          /*Nearby plugin initialization*/
+          var options = {
+            divId: "nearby_search",
+            map: map,
+            keywords: "adventure",  
+            refLocation: "31.09,77.26", 
+            fitbounds: true,
+            icon: {
+              url: "https://apis.mappls.com/map_v3/1.png",
+            },
+            click_callback: function (d) {
+              if (d) {
+                var l =
+                  "Name: " +
+                  d.placeName +
+                  "\nAddress: " +
+                  d.placeAddress +
+                  "\neLoc: " +
+                  d.eLoc;
+                alert(l);
+              }
+            },
+          };
+          mappls.nearby(options, function (data) {
+            nr = data;
+            console.log(nr);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

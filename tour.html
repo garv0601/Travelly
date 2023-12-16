@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="tour.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="navbar.css">
+  <script src="https://kit.fontawesome.com/ab2155e76b.js" ce></script>
+  <script src="chatbox.js" defer></script>
+  <script src="https://apis.mappls.com/advancedmaps/api/aef407688333728d281152ec7567c8c6/map_sdk?layer=vector&v=3.0&callback=initMap1"></script>
+  <script src="https://apis.mappls.com/advancedmaps/api/d8f843b2-f5ff-4732-9d7e-660bff1c4a19/map_sdk_plugins?v=3.0"></script>
+  <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+  <title>Document</title>
+</head>
+<body>
+
+
+  <!-- navbar --> <!-- navbar --> <!-- navbar -->
+  <!-- navbar --> <!-- navbar --> <!-- navbar -->
+
+
+  <header>
+    <div class="navbar">
+      <img src="media/logo1.png" class="logo1" alt="">
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tour.html" class="active">Tour</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="exp.html">Explore</a></li>
+      </ul>
+      <a href="#" class="action_btn">Login</a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="dropdown_menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tour.html" class="active">Tour</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="exp.html">Explore</a></li>
+      <li><a href="#" class="action_btn">Login</a></li>
+    </div>
+  </header>
+
+
+  <!-- Chatbot --> <!-- Chatbot --> <!-- Chatbot -->
+  <!-- Chatbot --> <!-- Chatbot --> <!-- Chatbot -->
+
+
+  <button class="chatbot-toggler">
+    <span class="material-symbols-outlined">mode_comment</span>
+    <span class="material-symbols-outlined">close</span>
+  </button>
+
+  <div class="chatbot">
+
+    <div class="head">
+      <h2>Chatbot</h2>
+      <span class="close-btn material-symbols-outlined">close</span>
+    </div>
+
+    <ul class="chatbox">
+      <li class="chat incoming">
+        <span class="material-symbols-outlined">smart_toy</span>
+        <p>Hi there!<br>How may I help you today?</p>
+      </li>
+    </ul>
+
+    <div class="chat-input">
+      <textarea placeholder="Enter the message..." required></textarea>
+      <span id="send-btn" class="material-symbols-outlined">send</span>
+    </div>
+  </div>
+
+
+  <!-- sidebar --> <!-- sidebar --> <!-- sidebar -->
+  <!-- sidebar --> <!-- sidebar --> <!-- sidebar -->
+
+
+  <div class="sidebar">
+    <div class="top">
+      <div class="logo">
+        <i class="fa-solid fa-road"></i>
+        <span>Travelly</span>
+      </div>
+      <i class="fa-solid fa-bars" id="btn"></i>
+    </div>
+    <div class="user">
+      <img src="https://gamedaim.com/wp-content/uploads/2022/01/28.jpg.webp" alt="" class="user-img">
+      <div>
+        <p class="bold">Client 69</p>
+        <p>User</p>
+      </div>
+    </div>
+    <ul>
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-hotel"></i>
+          <span class="nav-item">Hotels</span>
+        </a>
+        <span class="tooltip">Hotels</span>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-utensils"></i>
+          <span class="nav-item">Restaurant</span>
+        </a>
+        <span class="tooltip">Restaurant</span>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-mountain-city"></i>
+          <span class="nav-item">Tourism</span>
+        </a>
+        <span class="tooltip">Tourism</span>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-parachute-box"></i>
+          <span class="nav-item">Adventure</span>
+        </a>
+        <span class="tooltip">Adventure</span>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-gas-pump"></i>
+          <span class="nav-item">Petrol</span>
+        </a>
+        <span class="tooltip">Petrol</span>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-truck-medical"></i>
+          <span class="nav-item">Emergency</span>
+        </a>
+        <span class="tooltip">Emergency</span>
+      </li>
+
+    </ul>
+  </div>
+
+
+
+
+  <!-- map integration --> <!-- map integration --> <!-- map integration --> 
+  <!-- map integration --> <!-- map integration --> <!-- map integration --> 
+
+
+
+  <div class="main-content">
+    <div id="map"></div>
+  </div>
+
+
+
+  <!-- rest js --> <!-- rest js --> <!-- rest js --> <!-- rest js --> 
+  <!-- rest js --> <!-- rest js --> <!-- rest js --> <!-- rest js --> 
+  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="map.js"></script>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function(){
+      dropDownMenu.classList.toggle('open')
+      const isOpen = dropDownMenu.classList.contains('open')
+
+      toggleBtnIcon.classList = isOpen
+      ? 'fa-solid fa-xmark'
+      : 'fa-solid fa-bars'
+    }
+  </script>
+
+</body>
+
+<script>
+  let btn = document.querySelector('#btn')
+  let sidebar = document.querySelector('.sidebar')
+
+  btn.onclick = function() {
+    sidebar.classList.toggle('active')
+  };
+</script>
+
+</html>

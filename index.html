@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+    <title>Travelly/Home</title>
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+      <source src="media/bg video.mov" type="video/mp4" />
+    </video>
+    <header>
+      <div class="navbar">
+        <img src="media/logo1.png" class="logo1" alt="">
+        <ul class="links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="tour.html">Tour</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="exp.html">Explore</a></li>
+        </ul>
+        <a href="login_system/Login.html" class="action_btn">Login</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="tour.html">Tour</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="exp.html">Explore</a></li>
+        <a href="#" class="action_btn">Login</a>
+      </div>
+    </header>
+
+      <div class="container">
+      <div id="slide">
+        <div class="item" style="background-image: url(media/HP.jpg)">
+          <div class="content">
+            <div class="name">Himachal Pradesh</div>
+            <div class="des">
+              Himachal Pradesh, a northern Indian state, is celebrated for its
+              serene hill stations like Shimla and Manali, where tourists can
+              escape the summer heat and enjoy snowfall in winter. With its
+              picturesque landscapes, vibrant culture, and abundant trekking
+              opportunities.
+            </div>
+            <button class="btn" onclick="window.location.href='individual_webpage/HP.html'">See more</button>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(media/UK.jpg)">
+          <div class="content">
+            <div class="name">Uttrakhand</div>
+            <div class="des">
+              Uttarakhand, nestled in the Himalayan region of India, is renowned
+              for its breathtaking natural beauty, featuring lush forests,
+              pristine rivers, and towering peaks. It is a popular destination
+              for both spiritual seekers and adventure enthusiasts, offering a
+              unique blend of spirituality and thrilling outdoor experiences.
+            </div>
+            <button class="btn" onclick="window.location.href='individual_webpage/UK.html'">See more</button>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(media/jk.jpg)">
+          <div class="content">
+            <div class="name">Jammu & Kashmir</div>
+            <div class="des">
+              Jammu and Kashmir, situated in the northernmost part of India, is
+              renowned for its breathtaking landscapes, including the stunning
+              Dal Lake in Srinagar and the snow-capped peaks of the Himalayas.
+              Despite its natural beauty, the region has also been historically
+              marked by political complexities, making it a place of both
+              enchantment and controversy.
+            </div>
+            <button class="btn" onclick="window.location.href='individual_webpage/jk.html'">See more</button>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(media/ladakh.jpeg)">
+          <div class="content">
+            <div class="name">Ladakh</div>
+            <div class="des">
+              Ladakh, a high-altitude region in the Indian state of Jammu and
+              Kashmir, boasts starkly beautiful landscapes, including barren
+              deserts, azure lakes, and dramatic mountain ranges, such as the
+              Ladakh and Zanskar ranges. It's a haven for adventure seekers,
+              trekkers, and those seeking solitude amidst the stunning and
+              remote Himalayan terrain.
+            </div>
+            <button class="btn" onclick="window.location.href='individual_webpage/ladakh.html'">See more</button>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+        <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+      </div>
+      </div>
+    
+    <script src="script.js"></script>
+    <script src="loding_anim.js"></script>
+
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>

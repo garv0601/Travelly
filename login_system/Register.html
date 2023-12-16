@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="register_style.css">
+    <title>Register</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="" onsubmit="signup(event)">
+                    <h2>Register</h2>
+                    <div class="inputbox">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <input type="text" name="full_name" id="full_name" autocomplete="off" required>
+                        <label for="name">Full Name</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="email" id="email" autocomplete="off" required>
+                        <label for="new_email">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline" id="passwordToggle"></ion-icon>
+                        <input type="password" name="password" id="password" autocomplete="off" required>
+                        <label for="new_password">Password</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="confPassword" id="confPassword" autocomplete="off" required>
+                        <label for="re_enter_password">Confirm Password</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="call-outline"></ion-icon>
+                        <input type="tel" name="mobile" id="mobile" autocomplete="off" required>
+                        <label for="">Mobile</label>
+                    </div>
+                    <div>
+                        <input type="submit" id="registerButton" name="submit" value="Register">
+                    </div>
+                    <div class="Register">
+                        <p>Already have an account? &nbsp; <a href="Login.html">Login Now</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="register.js" type="module"></script>
+
+</html>
